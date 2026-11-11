@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Szyfr Vigenere</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Szyfr Vigenere</h1>
+
+  <div class="formularz">
+
+    <label>Tekst:</label>
+    <textarea id="tekst" rows="5" placeholder="Wpisz tekst..."></textarea>
+
+    <label>Klucz:</label>
+    <input type="text" id="klucz" placeholder="Wpisz klucz (tylko litery)">
+
+    <p id="info-klucz">Długość klucza: 0 | Siła: -</p>
+    <div id="pasek-sily">
+      <div id="wypelnienie"></div>
+    </div>
+
+    <div class="przyciski">
+      <button onclick="wyslij('encrypt')">Zaszyfruj</button>
+      <button onclick="wyslij('decrypt')">Odszyfruj</button>
+      <button onclick="wyczysc()">Wyczyść</button>
+    </div>
+
+  </div>
+
+  <div id="wynik-box">
+    <label>Wynik:</label>
+    <p id="wynik-tekst"></p>
+    <button onclick="kopiuj()">Kopiuj</button>
+  </div>
+
+  <p id="blad"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
